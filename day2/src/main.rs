@@ -107,14 +107,11 @@ impl ReportSafetySecond {
         let mut valids = 0;
         for report in reports {
             if ReportSafetySecond::check_increment_second(report) {
-                println!("Increment: {:?}", report);
                 valids += 1;
                 continue;
             }
             if ReportSafetySecond::check_decrease_second(report) {
-                println!("Decrease: {:?}", report);
                 valids += 1;
-                
             }
         }
         valids
